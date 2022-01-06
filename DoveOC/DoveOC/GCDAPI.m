@@ -10,6 +10,14 @@
 @implementation GCDAPI
 
 /*
+ 
+ GCD优点
+
+ GCD 可用于多核的并行运算；
+ GCD 会自动利用更多的 CPU 内核（比如双核、四核）；
+ GCD 会自动管理线程的生命周期（创建线程、调度任务、销毁线程）；
+ 程序员只需要告诉 GCD 想要执行什么任务，不需要编写任何线程管理代码。
+ 
  问题：
  （数据竞争）多个线程更新相同的资源导致数据的不一致
  （死锁）停止等待的线程会导致多个线程相互持续等待
@@ -101,6 +109,7 @@
 - (void)dispatch_apply
 {
     dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    // 可以认为是并发方式的 for 循环语句
     dispatch_apply(10, concurrentQueue, ^(size_t index) {
         NSLog(@"%zu", index);
     });
@@ -123,6 +132,7 @@
         
     });
     
+    //任务会等待它之前的所有其他任务完成，才开始执行！而它之后的任务会暂停
     dispatch_barrier_async(concurrentDispatchQueue, ^{
         
     });
@@ -230,6 +240,94 @@
             // 只能再主线程中做的事
         });
     });
+}
+
+
+
+
+/*
+ 
+ 概念词 ：
+ 
+ 串行、并行任务
+ Serial
+ Concurrent
+ 
+ 同步、异步队列
+ Synchronous
+ Asynchronous
+ 
+ 临界区
+ Critical Section
+ 概念：通过对多线程的串行化来访问公共资源或一段代码，速度快，适合控制数据访问。在任意时刻只允许一个线程对共享资源进行访问，如果有多个线程试图访问公共资源，那么在有一个线程进入后，其他试图访问公共资源的线程将被挂起，并一直等到进入临界区的线程离开，临界区在被释放后，其他线程才可以抢占。
+ 
+ 竞态条件
+ Race Condition
+ 从多进程间通信的角度来讲，是指两个或多个进程对共享的数据进行读或写的操作时，最终的结果取决于这些进程的执行顺序
+ 多描述基于特定序列或事件执行时机的软件系统以不受控制的方式运行的行为 ，例如程序的并发任务执行的确切顺序。竞态条件可导致无法预测的行为，而不能通过代码检查立即发现
+ 
+ 死锁
+ Deadlock
+ 
+ 线程安全
+ Thread Safe
+ 
+ 上下文切换
+ Context Switch
+ 概念：一个上下文切换指当你在单个进程里切换执行不同的线程时存储与恢复执行状态的过程。这个过程在编写多任务应用时很普遍，但会带来一些额外的开销。
+ 
+ 
+ 并发 并行
+ Concurrency Parallelism
+ 概念：并发和并行从宏观角度来看都是同时处理多个任务。但并发和并行又有区别，如果你理解的同时是指同一个时刻发生，那么称之为两个或多个任务并行执行；若你理解的同时是指同一时间间隔（0.01秒内）发生，那么称之为多个任务并发执行。
+
+ 队列
+ Queue
+ 
+ 调度队列
+ dispatch Queue
+ 调度队列自身是线程安全的
+ 
+ 串行队列
+ Serial Queue
+ 
+ 并发队列
+ Concurrent Queue
+ 
+ 任务派发
+ Grand Central Dispatch
+ 我们使用 GCD 接口仅涉及 Queue & Task，正确地把 Task 加入到 Queue，然后什么都不用管
+ 根据任务性质，所处环境以及机器配置来决定是否使用现有线程，哪个线程，或是创建一个新的线程，然后把任务派发出去
+ 
+ 
+ */
+
+
+
+/*
+ 信号量临时专栏
+ 
+ 日常开发中，我们对串行执行方式“愈加不满”，不断开辟线程来处理事务，要知道线程达到一定数量会导致应用崩溃！因此一方面我们希望并发处理，一方面又不想过多的创建线程（可能是无心之失，执行任务过于耗时，不断累积导致最后线程数量爆炸）。
+
+ 因此我们需要信号量来控制并发操作。dispatch_semaphore_create(count) 创建一个初始值为 count 的信号量，允许访问资源的总量（这里的资源就是线程数量），使用 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) 查询是否有足够的资源供当前使用，当信号总量小于等于0的时候会一直等待，否则表示有足够的资源（起码有一个），允许执行你要的操作，并让信号总量减 1 ——因为此刻你占有了它。当然使用完这个资源时，你需要使用 dispatch_semaphore_signal(semaphore) 来通知信号量加 1来 来释放资源使用权。其他等待信号量大于 0 的地方，此刻由于资源的占有权空出，允许开始执行他们的任务了。
+ 
+ */
+- (void)semaphore
+{
+    dispatch_group_t group = dispatch_group_create();   // 1
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(10);   // 2
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0); // 3
+    for (int i = 0; i < 100; i++)
+    {
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);   // 4
+        dispatch_group_async(group, queue, ^{
+            NSLog(@"%i",i);    // 5
+            sleep(2);
+            dispatch_semaphore_signal(semaphore);   // 6
+        });
+    }
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);// 7
+    NSLog(@"所有任务完成");
 }
 
 
