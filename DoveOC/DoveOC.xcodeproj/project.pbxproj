@@ -19,6 +19,7 @@
 		942AF8A22784B0E300B48D74 /* DoveOCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AF8A12784B0E300B48D74 /* DoveOCUITestsLaunchTests.m */; };
 		94DCD08E2784B31E00481C5E /* GCDAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD08D2784B31E00481C5E /* GCDAPI.m */; };
 		94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */; };
+		96A59AC928F13F11009119E3 /* HDVPN.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59AC828F13F10009119E3 /* HDVPN.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		94DCD08D2784B31E00481C5E /* GCDAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAPI.m; sourceTree = "<group>"; };
 		94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOVMemoryManagement.h; sourceTree = "<group>"; };
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
+		96A59AC728F13F10009119E3 /* HDVPN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDVPN.h; sourceTree = "<group>"; };
+		96A59AC828F13F10009119E3 /* HDVPN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVPN.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		942AF8782784B0DF00B48D74 /* DoveOC */ = {
 			isa = PBXGroup;
 			children = (
+				96A59AC628F13E9C009119E3 /* category */,
 				942AF8792784B0DF00B48D74 /* AppDelegate.h */,
 				942AF87A2784B0DF00B48D74 /* AppDelegate.m */,
 				942AF87C2784B0DF00B48D74 /* SceneDelegate.h */,
@@ -144,6 +148,15 @@
 				942AF8A12784B0E300B48D74 /* DoveOCUITestsLaunchTests.m */,
 			);
 			path = DoveOCUITests;
+			sourceTree = "<group>";
+		};
+		96A59AC628F13E9C009119E3 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				96A59AC728F13F10009119E3 /* HDVPN.h */,
+				96A59AC828F13F10009119E3 /* HDVPN.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				CLASSPREFIX = DOV;
+				CLASSPREFIX = HD;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					942AF8752784B0DF00B48D74 = {
@@ -282,6 +295,7 @@
 				942AF87B2784B0DF00B48D74 /* AppDelegate.m in Sources */,
 				94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */,
 				942AF88C2784B0E200B48D74 /* main.m in Sources */,
+				96A59AC928F13F11009119E3 /* HDVPN.m in Sources */,
 				942AF87E2784B0DF00B48D74 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -457,7 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R64HGND54Q;
+				DEVELOPMENT_TEAM = 9GE322NYCW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DoveOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -484,7 +498,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R64HGND54Q;
+				DEVELOPMENT_TEAM = 9GE322NYCW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DoveOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
