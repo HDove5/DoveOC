@@ -116,23 +116,12 @@
 		942AF8782784B0DF00B48D74 /* DoveOC */ = {
 			isa = PBXGroup;
 			children = (
+				96A59AD228F66DF3009119E3 /* Test */,
+				96A59AD128F66AB7009119E3 /* Modules */,
 				96A59ACA28F15D05009119E3 /* Tools */,
 				96A59AC628F13E9C009119E3 /* Category */,
-				942AF8792784B0DF00B48D74 /* AppDelegate.h */,
-				942AF87A2784B0DF00B48D74 /* AppDelegate.m */,
-				942AF87C2784B0DF00B48D74 /* SceneDelegate.h */,
-				942AF87D2784B0DF00B48D74 /* SceneDelegate.m */,
-				942AF87F2784B0DF00B48D74 /* ViewController.h */,
-				942AF8802784B0DF00B48D74 /* ViewController.m */,
-				94DCD08C2784B31E00481C5E /* GCDAPI.h */,
-				94DCD08D2784B31E00481C5E /* GCDAPI.m */,
-				94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */,
-				94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */,
-				942AF8822784B0DF00B48D74 /* Main.storyboard */,
-				942AF8852784B0E200B48D74 /* Assets.xcassets */,
-				942AF8872784B0E200B48D74 /* LaunchScreen.storyboard */,
-				942AF88A2784B0E200B48D74 /* Info.plist */,
-				942AF88B2784B0E200B48D74 /* main.m */,
+				96A59ACF28F66921009119E3 /* Application */,
+				96A59AD028F66A2C009119E3 /* Config */,
 			);
 			path = DoveOC;
 			sourceTree = "<group>";
@@ -170,6 +159,49 @@
 				96A59AC828F13F10009119E3 /* HDVPN.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		96A59ACF28F66921009119E3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				942AF8792784B0DF00B48D74 /* AppDelegate.h */,
+				942AF87A2784B0DF00B48D74 /* AppDelegate.m */,
+				942AF87C2784B0DF00B48D74 /* SceneDelegate.h */,
+				942AF87D2784B0DF00B48D74 /* SceneDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		96A59AD028F66A2C009119E3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				942AF88B2784B0E200B48D74 /* main.m */,
+				942AF8822784B0DF00B48D74 /* Main.storyboard */,
+				942AF8852784B0E200B48D74 /* Assets.xcassets */,
+				942AF8872784B0E200B48D74 /* LaunchScreen.storyboard */,
+				942AF88A2784B0E200B48D74 /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		96A59AD128F66AB7009119E3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				94DCD08C2784B31E00481C5E /* GCDAPI.h */,
+				94DCD08D2784B31E00481C5E /* GCDAPI.m */,
+				94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */,
+				94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		96A59AD228F66DF3009119E3 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				942AF87F2784B0DF00B48D74 /* ViewController.h */,
+				942AF8802784B0DF00B48D74 /* ViewController.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
