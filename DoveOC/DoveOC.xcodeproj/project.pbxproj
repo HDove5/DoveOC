@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		942AF87B2784B0DF00B48D74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AF87A2784B0DF00B48D74 /* AppDelegate.m */; };
-		942AF87E2784B0DF00B48D74 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AF87D2784B0DF00B48D74 /* SceneDelegate.m */; };
 		942AF8812784B0DF00B48D74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AF8802784B0DF00B48D74 /* ViewController.m */; };
 		942AF8842784B0DF00B48D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942AF8822784B0DF00B48D74 /* Main.storyboard */; };
 		942AF8862784B0E200B48D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942AF8852784B0E200B48D74 /* Assets.xcassets */; };
@@ -21,6 +20,7 @@
 		94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */; };
 		96A59AC928F13F11009119E3 /* HDVPN.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59AC828F13F10009119E3 /* HDVPN.m */; };
 		96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */; };
+		96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB9D6428F80303003F1A68 /* HDHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,6 @@
 		942AF8762784B0DF00B48D74 /* DoveOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoveOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942AF8792784B0DF00B48D74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		942AF87A2784B0DF00B48D74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		942AF87C2784B0DF00B48D74 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		942AF87D2784B0DF00B48D74 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		942AF87F2784B0DF00B48D74 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		942AF8802784B0DF00B48D74 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		942AF8832784B0DF00B48D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +64,8 @@
 		96A59AC828F13F10009119E3 /* HDVPN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVPN.m; sourceTree = "<group>"; };
 		96A59ACB28F15DB9009119E3 /* NSString+HDContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HDContent.h"; sourceTree = "<group>"; };
 		96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HDContent.m"; sourceTree = "<group>"; };
+		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
+		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +166,6 @@
 			children = (
 				942AF8792784B0DF00B48D74 /* AppDelegate.h */,
 				942AF87A2784B0DF00B48D74 /* AppDelegate.m */,
-				942AF87C2784B0DF00B48D74 /* SceneDelegate.h */,
-				942AF87D2784B0DF00B48D74 /* SceneDelegate.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -187,6 +185,8 @@
 		96A59AD128F66AB7009119E3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				96FB9D6328F80303003F1A68 /* HDHomeViewController.h */,
+				96FB9D6428F80303003F1A68 /* HDHomeViewController.m */,
 				94DCD08C2784B31E00481C5E /* GCDAPI.h */,
 				94DCD08D2784B31E00481C5E /* GCDAPI.m */,
 				94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */,
@@ -338,11 +338,11 @@
 				94DCD08E2784B31E00481C5E /* GCDAPI.m in Sources */,
 				96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */,
 				942AF8812784B0DF00B48D74 /* ViewController.m in Sources */,
+				96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */,
 				942AF87B2784B0DF00B48D74 /* AppDelegate.m in Sources */,
 				94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */,
 				942AF88C2784B0E200B48D74 /* main.m in Sources */,
 				96A59AC928F13F11009119E3 /* HDVPN.m in Sources */,
-				942AF87E2784B0DF00B48D74 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -502,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -521,7 +521,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DoveOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -548,7 +548,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DoveOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
