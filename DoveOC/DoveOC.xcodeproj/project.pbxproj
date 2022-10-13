@@ -60,6 +60,7 @@
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
 		9693639B28F80D8A0031FBBC /* HDTestHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestHomeViewController.h; sourceTree = "<group>"; };
 		9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestHomeViewController.m; sourceTree = "<group>"; };
+		9693639E28F827A10031FBBC /* DoveOCPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoveOCPrefix.pch; sourceTree = "<group>"; };
 		96A59AC728F13F10009119E3 /* HDVPN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDVPN.h; sourceTree = "<group>"; };
 		96A59AC828F13F10009119E3 /* HDVPN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVPN.m; sourceTree = "<group>"; };
 		96A59ACB28F15DB9009119E3 /* NSString+HDContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HDContent.h"; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		96A59AD028F66A2C009119E3 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				9693639E28F827A10031FBBC /* DoveOCPrefix.pch */,
 				942AF88B2784B0E200B48D74 /* main.m */,
 				942AF8822784B0DF00B48D74 /* Main.storyboard */,
 				942AF8852784B0E200B48D74 /* Assets.xcassets */,
@@ -518,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GE322NYCW;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DoveOC/DoveOCPrefix.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DoveOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -544,6 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GE322NYCW;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DoveOC/DoveOCPrefix.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DoveOC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
