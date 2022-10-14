@@ -21,6 +21,13 @@
 		96A59AC928F13F11009119E3 /* HDVPN.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59AC828F13F10009119E3 /* HDVPN.m */; };
 		96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */; };
 		96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB9D6428F80303003F1A68 /* HDHomeViewController.m */; };
+		96FE9F9F28F9613600B9D87C /* HDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE9F9E28F9613600B9D87C /* HDWebViewController.m */; };
+		96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA128F968E800B9D87C /* JStoOC.html */; };
+		96FE9FA828F968E900B9D87C /* backbutton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA228F968E800B9D87C /* backbutton@3x.png */; };
+		96FE9FA928F968E900B9D87C /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA328F968E800B9D87C /* backbutton@2x.png */; };
+		96FE9FAA28F968E900B9D87C /* webRefreshButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA428F968E800B9D87C /* webRefreshButton@3x.png */; };
+		96FE9FAB28F968E900B9D87C /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA528F968E900B9D87C /* girl.png */; };
+		96FE9FAC28F968E900B9D87C /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA628F968E900B9D87C /* webRefreshButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,14 @@
 		96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HDContent.m"; sourceTree = "<group>"; };
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
+		96FE9F9D28F9613600B9D87C /* HDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDWebViewController.h; sourceTree = "<group>"; };
+		96FE9F9E28F9613600B9D87C /* HDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDWebViewController.m; sourceTree = "<group>"; };
+		96FE9FA128F968E800B9D87C /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
+		96FE9FA228F968E800B9D87C /* backbutton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@3x.png"; sourceTree = "<group>"; };
+		96FE9FA328F968E800B9D87C /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
+		96FE9FA428F968E800B9D87C /* webRefreshButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@3x.png"; sourceTree = "<group>"; };
+		96FE9FA528F968E900B9D87C /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		96FE9FA628F968E900B9D87C /* webRefreshButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +202,7 @@
 		96A59AD128F66AB7009119E3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				96FE9FA028F968D700B9D87C /* web */,
 				96FB9D6328F80303003F1A68 /* HDHomeViewController.h */,
 				96FB9D6428F80303003F1A68 /* HDHomeViewController.m */,
 				94DCD08C2784B31E00481C5E /* GCDAPI.h */,
@@ -202,8 +218,23 @@
 			children = (
 				9693639B28F80D8A0031FBBC /* HDTestHomeViewController.h */,
 				9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */,
+				96FE9F9D28F9613600B9D87C /* HDWebViewController.h */,
+				96FE9F9E28F9613600B9D87C /* HDWebViewController.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		96FE9FA028F968D700B9D87C /* web */ = {
+			isa = PBXGroup;
+			children = (
+				96FE9FA328F968E800B9D87C /* backbutton@2x.png */,
+				96FE9FA228F968E800B9D87C /* backbutton@3x.png */,
+				96FE9FA528F968E900B9D87C /* girl.png */,
+				96FE9FA128F968E800B9D87C /* JStoOC.html */,
+				96FE9FA628F968E900B9D87C /* webRefreshButton@2x.png */,
+				96FE9FA428F968E800B9D87C /* webRefreshButton@3x.png */,
+			);
+			path = web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +341,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */,
+				96FE9FAB28F968E900B9D87C /* girl.png in Resources */,
+				96FE9FA828F968E900B9D87C /* backbutton@3x.png in Resources */,
 				942AF8892784B0E200B48D74 /* LaunchScreen.storyboard in Resources */,
+				96FE9FAA28F968E900B9D87C /* webRefreshButton@3x.png in Resources */,
+				96FE9FAC28F968E900B9D87C /* webRefreshButton@2x.png in Resources */,
+				96FE9FA928F968E900B9D87C /* backbutton@2x.png in Resources */,
 				942AF8862784B0E200B48D74 /* Assets.xcassets in Resources */,
 				942AF8842784B0DF00B48D74 /* Main.storyboard in Resources */,
 			);
@@ -342,6 +379,7 @@
 				96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */,
 				942AF87B2784B0DF00B48D74 /* AppDelegate.m in Sources */,
 				9693639D28F80D8A0031FBBC /* HDTestHomeViewController.m in Sources */,
+				96FE9F9F28F9613600B9D87C /* HDWebViewController.m in Sources */,
 				94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */,
 				942AF88C2784B0E200B48D74 /* main.m in Sources */,
 				96A59AC928F13F11009119E3 /* HDVPN.m in Sources */,

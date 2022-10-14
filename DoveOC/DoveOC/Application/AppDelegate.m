@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     // 测试的时候注释，看Modules中的内容时打开
-//    [self p_modulesHomeViewController];
+    [self p_modulesHomeViewController];
     
     return YES;
 }

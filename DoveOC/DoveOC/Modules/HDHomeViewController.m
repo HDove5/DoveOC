@@ -6,6 +6,7 @@
 //
 
 #import "HDHomeViewController.h"
+#import "HDWebViewController.h"
 
 @interface HDHomeViewController ()
 
@@ -20,7 +21,10 @@
     
     // Do any additional setup after loading the view.
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    HDWebViewController *webView = [[HDWebViewController alloc] init];
+    [self.navigationController pushViewController:webView animated:YES];
+}
 /*
 #pragma mark - Navigation
 
