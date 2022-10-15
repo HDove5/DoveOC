@@ -43,15 +43,16 @@
 - (int)test
 {
     @autoreleasepool {
-            int a = 10; // 栈
-            int b = 20; // 栈
-            // obj : 栈
-            // NSObject对象(计数器==1) : 堆
-            NSObject *obj = [[NSObject alloc] init];
-        }
-        // 经过上面代码后, 栈里面的变量a、b、p 都会被回收
-        // 但是堆里面的NSObject对象还会留在内存中,因为它是计数器依然是1
-        return 0;
+        int a = 10; // 栈
+        int b = 20; // 栈
+        // obj : 栈
+        // NSObject对象(计数器==1) : 堆
+        NSObject *obj = [[NSObject alloc] init];
+        NSLog(@"%d - %d - %@, ", a, b, obj);
+    }
+    // 经过上面代码后, 栈里面的变量a、b、p 都会被回收
+    // 但是堆里面的NSObject对象还会留在内存中,因为它是计数器依然是1
+    return 0;
 }
 
 

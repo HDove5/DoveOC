@@ -17,17 +17,13 @@
 		942AF8A22784B0E300B48D74 /* DoveOCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AF8A12784B0E300B48D74 /* DoveOCUITestsLaunchTests.m */; };
 		94DCD08E2784B31E00481C5E /* GCDAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD08D2784B31E00481C5E /* GCDAPI.m */; };
 		94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */; };
+		968381B828FA973C0030F22E /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 968381B728FA973C0030F22E /* girl.png */; };
 		9693639D28F80D8A0031FBBC /* HDTestHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */; };
 		96A59AC928F13F11009119E3 /* HDVPN.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59AC828F13F10009119E3 /* HDVPN.m */; };
 		96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */; };
 		96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB9D6428F80303003F1A68 /* HDHomeViewController.m */; };
 		96FE9F9F28F9613600B9D87C /* HDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE9F9E28F9613600B9D87C /* HDWebViewController.m */; };
 		96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA128F968E800B9D87C /* JStoOC.html */; };
-		96FE9FA828F968E900B9D87C /* backbutton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA228F968E800B9D87C /* backbutton@3x.png */; };
-		96FE9FA928F968E900B9D87C /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA328F968E800B9D87C /* backbutton@2x.png */; };
-		96FE9FAA28F968E900B9D87C /* webRefreshButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA428F968E800B9D87C /* webRefreshButton@3x.png */; };
-		96FE9FAB28F968E900B9D87C /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA528F968E900B9D87C /* girl.png */; };
-		96FE9FAC28F968E900B9D87C /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA628F968E900B9D87C /* webRefreshButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +61,7 @@
 		94DCD08D2784B31E00481C5E /* GCDAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAPI.m; sourceTree = "<group>"; };
 		94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOVMemoryManagement.h; sourceTree = "<group>"; };
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
+		968381B728FA973C0030F22E /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		9693639B28F80D8A0031FBBC /* HDTestHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestHomeViewController.h; sourceTree = "<group>"; };
 		9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestHomeViewController.m; sourceTree = "<group>"; };
 		9693639E28F827A10031FBBC /* DoveOCPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoveOCPrefix.pch; sourceTree = "<group>"; };
@@ -77,11 +74,6 @@
 		96FE9F9D28F9613600B9D87C /* HDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDWebViewController.h; sourceTree = "<group>"; };
 		96FE9F9E28F9613600B9D87C /* HDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDWebViewController.m; sourceTree = "<group>"; };
 		96FE9FA128F968E800B9D87C /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
-		96FE9FA228F968E800B9D87C /* backbutton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@3x.png"; sourceTree = "<group>"; };
-		96FE9FA328F968E800B9D87C /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
-		96FE9FA428F968E800B9D87C /* webRefreshButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@3x.png"; sourceTree = "<group>"; };
-		96FE9FA528F968E900B9D87C /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
-		96FE9FA628F968E900B9D87C /* webRefreshButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,9 +194,9 @@
 		96A59AD128F66AB7009119E3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				96FE9FA028F968D700B9D87C /* web */,
 				96FB9D6328F80303003F1A68 /* HDHomeViewController.h */,
 				96FB9D6428F80303003F1A68 /* HDHomeViewController.m */,
+				96FE9FA028F968D700B9D87C /* web */,
 				94DCD08C2784B31E00481C5E /* GCDAPI.h */,
 				94DCD08D2784B31E00481C5E /* GCDAPI.m */,
 				94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */,
@@ -218,8 +210,6 @@
 			children = (
 				9693639B28F80D8A0031FBBC /* HDTestHomeViewController.h */,
 				9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */,
-				96FE9F9D28F9613600B9D87C /* HDWebViewController.h */,
-				96FE9F9E28F9613600B9D87C /* HDWebViewController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -227,12 +217,10 @@
 		96FE9FA028F968D700B9D87C /* web */ = {
 			isa = PBXGroup;
 			children = (
-				96FE9FA328F968E800B9D87C /* backbutton@2x.png */,
-				96FE9FA228F968E800B9D87C /* backbutton@3x.png */,
-				96FE9FA528F968E900B9D87C /* girl.png */,
+				96FE9F9D28F9613600B9D87C /* HDWebViewController.h */,
+				96FE9F9E28F9613600B9D87C /* HDWebViewController.m */,
+				968381B728FA973C0030F22E /* girl.png */,
 				96FE9FA128F968E800B9D87C /* JStoOC.html */,
-				96FE9FA628F968E900B9D87C /* webRefreshButton@2x.png */,
-				96FE9FA428F968E800B9D87C /* webRefreshButton@3x.png */,
 			);
 			path = web;
 			sourceTree = "<group>";
@@ -342,14 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */,
-				96FE9FAB28F968E900B9D87C /* girl.png in Resources */,
-				96FE9FA828F968E900B9D87C /* backbutton@3x.png in Resources */,
 				942AF8892784B0E200B48D74 /* LaunchScreen.storyboard in Resources */,
-				96FE9FAA28F968E900B9D87C /* webRefreshButton@3x.png in Resources */,
-				96FE9FAC28F968E900B9D87C /* webRefreshButton@2x.png in Resources */,
-				96FE9FA928F968E900B9D87C /* backbutton@2x.png in Resources */,
 				942AF8862784B0E200B48D74 /* Assets.xcassets in Resources */,
 				942AF8842784B0DF00B48D74 /* Main.storyboard in Resources */,
+				968381B828FA973C0030F22E /* girl.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

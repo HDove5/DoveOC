@@ -196,7 +196,7 @@
         // 是使用h5的视频播放器在线播放, 还是使用原生播放器全屏播放
         config.allowsInlineMediaPlayback = YES;
         //设置视频是否需要用户手动播放  设置为NO则会允许自动播放
-        config.requiresUserActionForMediaPlayback = YES;
+        config.mediaTypesRequiringUserActionForPlayback = YES;
         //设置是否允许画中画技术 在特定设备上有效
         config.allowsPictureInPictureMediaPlayback = YES;
         //设置请求的User-Agent信息中应用程序名称 iOS9后可用
@@ -226,7 +226,7 @@
         // 是否允许手势左滑返回上一级, 类似导航控制的左滑返回
         _webView.allowsBackForwardNavigationGestures = YES;
         //可返回的页面列表, 存储已打开过的网页
-        WKBackForwardList * backForwardList = [_webView backForwardList];
+//        WKBackForwardList * backForwardList = [_webView backForwardList];
         
 //        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.chinadaily.com.cn"]];
 //        [request addValue:[self readCurrentCookieWithDomain:@"http://www.chinadaily.com.cn"] forHTTPHeaderField:@"Cookie"];
@@ -364,7 +364,9 @@
         }])];
         [alertController addAction:([UIAlertAction actionWithTitle:@"打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSURL * url = [NSURL URLWithString:[urlStr stringByReplacingOccurrencesOfString:@"github://callName_?" withString:@""]];
-            [[UIApplication sharedApplication] openURL:url];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+                            
+            }];
             
         }])];
         [self presentViewController:alertController animated:YES completion:nil];

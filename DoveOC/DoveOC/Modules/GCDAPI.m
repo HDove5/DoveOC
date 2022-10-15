@@ -226,6 +226,8 @@
     dispatch_queue_t mainDispatchQueue = dispatch_get_main_queue();
     dispatch_queue_t HightGlobalDisPatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     
+    NSLog(@"%@ - %@ - %@ - %@", mySerialDispatchQueue, myConcurrentDispatchQueue, mainDispatchQueue, HightGlobalDisPatchQueue);
+    
 }
 
 
@@ -233,13 +235,14 @@
 /// 异步处理，处理完后使用异步处理的结果回到主线程中做事
 - (void)xiancheng
 {
-    
+    /*
     dispatch_async(@"queue", ^{
         // 这里异步的东西叮咣一顿处理完，处理完之后，使用处理结果，回到主线程中调用必须再主线程中做的事
         dispatch_async(dispatch_get_main_queue(), ^{
             // 只能再主线程中做的事
         });
     });
+     */
 }
 
 
