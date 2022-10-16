@@ -18,6 +18,9 @@
 		94DCD08E2784B31E00481C5E /* GCDAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD08D2784B31E00481C5E /* GCDAPI.m */; };
 		94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */; };
 		968381B828FA973C0030F22E /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 968381B728FA973C0030F22E /* girl.png */; };
+		968381BB28FA9FFC0030F22E /* OOP.md in Resources */ = {isa = PBXBuildFile; fileRef = 968381BA28FA9FFC0030F22E /* OOP.md */; };
+		968381BD28FAA06F0030F22E /* 开发规范.md in Resources */ = {isa = PBXBuildFile; fileRef = 968381BC28FAA06F0030F22E /* 开发规范.md */; };
+		968381BF28FAA2A90030F22E /* 内存优化.md in Resources */ = {isa = PBXBuildFile; fileRef = 968381BE28FAA2A90030F22E /* 内存优化.md */; };
 		9693639D28F80D8A0031FBBC /* HDTestHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */; };
 		96A59AC928F13F11009119E3 /* HDVPN.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59AC828F13F10009119E3 /* HDVPN.m */; };
 		96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */; };
@@ -62,6 +65,9 @@
 		94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOVMemoryManagement.h; sourceTree = "<group>"; };
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
 		968381B728FA973C0030F22E /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		968381BA28FA9FFC0030F22E /* OOP.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = OOP.md; sourceTree = "<group>"; };
+		968381BC28FAA06F0030F22E /* 开发规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "开发规范.md"; sourceTree = "<group>"; };
+		968381BE28FAA2A90030F22E /* 内存优化.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "内存优化.md"; sourceTree = "<group>"; };
 		9693639B28F80D8A0031FBBC /* HDTestHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestHomeViewController.h; sourceTree = "<group>"; };
 		9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestHomeViewController.m; sourceTree = "<group>"; };
 		9693639E28F827A10031FBBC /* DoveOCPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoveOCPrefix.pch; sourceTree = "<group>"; };
@@ -151,6 +157,16 @@
 			path = DoveOCUITests;
 			sourceTree = "<group>";
 		};
+		968381B928FA9FB00030F22E /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				968381BC28FAA06F0030F22E /* 开发规范.md */,
+				968381BE28FAA2A90030F22E /* 内存优化.md */,
+				968381BA28FA9FFC0030F22E /* OOP.md */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
 		96A59AC628F13E9C009119E3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,7 @@
 		96A59AD128F66AB7009119E3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				968381B928FA9FB00030F22E /* Document */,
 				96FB9D6328F80303003F1A68 /* HDHomeViewController.h */,
 				96FB9D6428F80303003F1A68 /* HDHomeViewController.m */,
 				96FE9FA028F968D700B9D87C /* web */,
@@ -330,6 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */,
+				968381BF28FAA2A90030F22E /* 内存优化.md in Resources */,
+				968381BD28FAA06F0030F22E /* 开发规范.md in Resources */,
+				968381BB28FA9FFC0030F22E /* OOP.md in Resources */,
 				942AF8892784B0E200B48D74 /* LaunchScreen.storyboard in Resources */,
 				942AF8862784B0E200B48D74 /* Assets.xcassets in Resources */,
 				942AF8842784B0DF00B48D74 /* Main.storyboard in Resources */,
