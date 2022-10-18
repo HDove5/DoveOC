@@ -26,6 +26,7 @@
 		96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */; };
 		96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB9D6428F80303003F1A68 /* HDHomeViewController.m */; };
 		96FC032128FE798E008DE8FF /* 基本规范.md in Resources */ = {isa = PBXBuildFile; fileRef = 96FC032028FE798E008DE8FF /* 基本规范.md */; };
+		96FC032328FEC908008DE8FF /* 防止崩溃.md in Resources */ = {isa = PBXBuildFile; fileRef = 96FC032228FEC907008DE8FF /* 防止崩溃.md */; };
 		96FE9F9F28F9613600B9D87C /* HDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE9F9E28F9613600B9D87C /* HDWebViewController.m */; };
 		96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 96FE9FA128F968E800B9D87C /* JStoOC.html */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		96FC032028FE798E008DE8FF /* 基本规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "基本规范.md"; sourceTree = "<group>"; };
+		96FC032228FEC907008DE8FF /* 防止崩溃.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "防止崩溃.md"; sourceTree = "<group>"; };
 		96FE9F9D28F9613600B9D87C /* HDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDWebViewController.h; sourceTree = "<group>"; };
 		96FE9F9E28F9613600B9D87C /* HDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDWebViewController.m; sourceTree = "<group>"; };
 		96FE9FA128F968E800B9D87C /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				96FC032028FE798E008DE8FF /* 基本规范.md */,
+				96FC032228FEC907008DE8FF /* 防止崩溃.md */,
 			);
 			path = Document;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				96FE9FA728F968E900B9D87C /* JStoOC.html in Resources */,
 				968381BF28FAA2A90030F22E /* 内存优化.md in Resources */,
+				96FC032328FEC908008DE8FF /* 防止崩溃.md in Resources */,
 				968381BD28FAA06F0030F22E /* 开发规范.md in Resources */,
 				968381BB28FA9FFC0030F22E /* OOP.md in Resources */,
 				942AF8892784B0E200B48D74 /* LaunchScreen.storyboard in Resources */,
