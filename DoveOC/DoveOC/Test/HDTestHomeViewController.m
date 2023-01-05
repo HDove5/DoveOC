@@ -18,14 +18,9 @@
     // Do any additional setup after loading the view.
     
     
-<<<<<<< HEAD
-    NSLog(@"AAA");
     NSLog(@"BBB");
     NSLog(@"CCC");
 
-
-=======
->>>>>>> parent of dc4078c (AAA)
 }
 
 
