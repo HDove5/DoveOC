@@ -29,6 +29,7 @@
 		96F6131B2966D87000895995 /* HD333.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F6131A2966D87000895995 /* HD333.m */; };
 		96F6131E2966E0F600895995 /* HDAAA.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F6131D2966E0F600895995 /* HDAAA.m */; };
 		96F613212966E14F00895995 /* HDBBB.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F613202966E14F00895995 /* HDBBB.m */; };
+		96F613242966E1C000895995 /* HDCCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F613232966E1C000895995 /* HDCCC.m */; };
 		96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FB9D6428F80303003F1A68 /* HDHomeViewController.m */; };
 		96FC032128FE798E008DE8FF /* 基本规范.md in Resources */ = {isa = PBXBuildFile; fileRef = 96FC032028FE798E008DE8FF /* 基本规范.md */; };
 		96FC032328FEC908008DE8FF /* 防止崩溃.md in Resources */ = {isa = PBXBuildFile; fileRef = 96FC032228FEC907008DE8FF /* 防止崩溃.md */; };
@@ -92,6 +93,8 @@
 		96F6131D2966E0F600895995 /* HDAAA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDAAA.m; sourceTree = "<group>"; };
 		96F6131F2966E14F00895995 /* HDBBB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDBBB.h; sourceTree = "<group>"; };
 		96F613202966E14F00895995 /* HDBBB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDBBB.m; sourceTree = "<group>"; };
+		96F613222966E1C000895995 /* HDCCC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCCC.h; sourceTree = "<group>"; };
+		96F613232966E1C000895995 /* HDCCC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCCC.m; sourceTree = "<group>"; };
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		96FC032028FE798E008DE8FF /* 基本规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "基本规范.md"; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 				96F6131D2966E0F600895995 /* HDAAA.m */,
 				96F6131F2966E14F00895995 /* HDBBB.h */,
 				96F613202966E14F00895995 /* HDBBB.m */,
+				96F613222966E1C000895995 /* HDCCC.h */,
+				96F613232966E1C000895995 /* HDCCC.m */,
 				96F613132966D7CE00895995 /* HD111.h */,
 				96F613142966D7CE00895995 /* HD111.m */,
 				96F613162966D85800895995 /* HD222.h */,
@@ -428,6 +433,7 @@
 				96F613182966D85800895995 /* HD222.m in Sources */,
 				942AF87B2784B0DF00B48D74 /* AppDelegate.m in Sources */,
 				96F6131E2966E0F600895995 /* HDAAA.m in Sources */,
+				96F613242966E1C000895995 /* HDCCC.m in Sources */,
 				9693639D28F80D8A0031FBBC /* HDTestHomeViewController.m in Sources */,
 				96FE9F9F28F9613600B9D87C /* HDWebViewController.m in Sources */,
 				94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */,
