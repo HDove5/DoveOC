@@ -17,6 +17,7 @@
 		942AF8A22784B0E300B48D74 /* DoveOCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AF8A12784B0E300B48D74 /* DoveOCUITestsLaunchTests.m */; };
 		94DCD08E2784B31E00481C5E /* GCDAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD08D2784B31E00481C5E /* GCDAPI.m */; };
 		94DCD0922786D7D800481C5E /* DOVMemoryManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */; };
+		9608BAD92966FD7000494FC6 /* HD111.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608BAD82966FD7000494FC6 /* HD111.m */; };
 		968381B828FA973C0030F22E /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 968381B728FA973C0030F22E /* girl.png */; };
 		968381BB28FA9FFC0030F22E /* OOP.md in Resources */ = {isa = PBXBuildFile; fileRef = 968381BA28FA9FFC0030F22E /* OOP.md */; };
 		968381BD28FAA06F0030F22E /* 开发规范.md in Resources */ = {isa = PBXBuildFile; fileRef = 968381BC28FAA06F0030F22E /* 开发规范.md */; };
@@ -66,6 +67,8 @@
 		94DCD08D2784B31E00481C5E /* GCDAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAPI.m; sourceTree = "<group>"; };
 		94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOVMemoryManagement.h; sourceTree = "<group>"; };
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
+		9608BAD72966FD7000494FC6 /* HD111.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HD111.h; sourceTree = "<group>"; };
+		9608BAD82966FD7000494FC6 /* HD111.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HD111.m; sourceTree = "<group>"; };
 		968381B728FA973C0030F22E /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		968381BA28FA9FFC0030F22E /* OOP.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = OOP.md; sourceTree = "<group>"; };
 		968381BC28FAA06F0030F22E /* 开发规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "开发规范.md"; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 			children = (
 				9693639B28F80D8A0031FBBC /* HDTestHomeViewController.h */,
 				9693639C28F80D8A0031FBBC /* HDTestHomeViewController.m */,
+				9608BAD72966FD7000494FC6 /* HD111.h */,
+				9608BAD82966FD7000494FC6 /* HD111.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				94DCD08E2784B31E00481C5E /* GCDAPI.m in Sources */,
 				96A59ACD28F15DB9009119E3 /* NSString+HDContent.m in Sources */,
 				96FB9D6528F80303003F1A68 /* HDHomeViewController.m in Sources */,
+				9608BAD92966FD7000494FC6 /* HD111.m in Sources */,
 				942AF87B2784B0DF00B48D74 /* AppDelegate.m in Sources */,
 				9693639D28F80D8A0031FBBC /* HDTestHomeViewController.m in Sources */,
 				96FE9F9F28F9613600B9D87C /* HDWebViewController.m in Sources */,
