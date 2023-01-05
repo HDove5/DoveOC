@@ -19,6 +19,8 @@
     
     
     NSLog(@"AAA");
+    NSLog(@"BBB");
+
 }
 
 
