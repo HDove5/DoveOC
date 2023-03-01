@@ -7,6 +7,10 @@
 
 #import "HD2222.h"
 
+@interface HD2222 ()
+
+@end
+
 @implementation HD2222
 
 @end
