@@ -1,18 +1,15 @@
 //
-//  HD111.h
+//  HD2222.h
 //  DoveOC
 //
-//  Created by DOVE on 2023/1/5.
+//  Created by DOVE on 2023/3/1.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HD111 : NSObject
-
-// OK
-
+@interface HD2222 : NSObject
 
 @end
 
