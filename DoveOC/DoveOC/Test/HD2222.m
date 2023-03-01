@@ -9,6 +9,9 @@
 
 @interface HD2222 ()
 
+/** <#属性含义#> */
+@property (nonatomic,copy) NSString *name;
+
 @end
 
 @implementation HD2222
