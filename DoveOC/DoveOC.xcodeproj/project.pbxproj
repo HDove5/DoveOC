@@ -74,6 +74,7 @@
 		96A59AC828F13F10009119E3 /* HDVPN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVPN.m; sourceTree = "<group>"; };
 		96A59ACB28F15DB9009119E3 /* NSString+HDContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HDContent.h"; sourceTree = "<group>"; };
 		96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HDContent.m"; sourceTree = "<group>"; };
+		96BC4BF529EED485007DF06B /* HDUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUIView.m; sourceTree = "<group>"; };
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		96FC032028FE798E008DE8FF /* 基本规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "基本规范.md"; sourceTree = "<group>"; };
@@ -158,16 +159,6 @@
 			path = DoveOCUITests;
 			sourceTree = "<group>";
 		};
-		968381B928FA9FB00030F22E /* Document */ = {
-			isa = PBXGroup;
-			children = (
-				968381BC28FAA06F0030F22E /* 开发规范.md */,
-				968381BE28FAA2A90030F22E /* 内存优化.md */,
-				968381BA28FA9FFC0030F22E /* OOP.md */,
-			);
-			path = Document;
-			sourceTree = "<group>";
-		};
 		96A59AC628F13E9C009119E3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +202,6 @@
 		96A59AD128F66AB7009119E3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				968381B928FA9FB00030F22E /* Document */,
 				96FB9D6328F80303003F1A68 /* HDHomeViewController.h */,
 				96FB9D6428F80303003F1A68 /* HDHomeViewController.m */,
 				96FE9FA028F968D700B9D87C /* web */,
@@ -226,6 +216,10 @@
 		96FC031F28FE795A008DE8FF /* Document */ = {
 			isa = PBXGroup;
 			children = (
+				96BC4BF529EED485007DF06B /* HDUIView.m */,
+				968381BC28FAA06F0030F22E /* 开发规范.md */,
+				968381BE28FAA2A90030F22E /* 内存优化.md */,
+				968381BA28FA9FFC0030F22E /* OOP.md */,
 				96FC032028FE798E008DE8FF /* 基本规范.md */,
 				96FC032228FEC907008DE8FF /* 防止崩溃.md */,
 			);
