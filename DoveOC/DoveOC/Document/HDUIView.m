@@ -220,6 +220,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+/// 视图的几何结构和布局属性
 @interface UIView(UIViewGeometry)
 
 // animatable. do not use frame if view is transformed since it will not correctly reflect the actual location of the view. use bounds + center instead.
@@ -257,6 +258,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+
+
+/// 视图的层级关系和视图树的操作(交互)
 @interface UIView(UIViewHierarchy)
 
 @property(nullable, nonatomic,readonly) UIView       *superview;
@@ -333,6 +337,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+
+
+/// 视图渲染的方法和属性
 @interface UIView(UIViewRendering)
 
 - (void)drawRect:(CGRect)rect;
@@ -374,6 +381,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+
+
+/// 定义了一些关于动画的方法，这些方法可以用来创建和执行视图动画，以及设置动画属性和选项
 @interface UIView(UIViewAnimation)
 
 + (void)setAnimationsEnabled:(BOOL)enabled;                         // ignore any attribute changes while set.
@@ -384,6 +394,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+
+
+/// 执行带有块语法的动画
 @interface UIView(UIViewAnimationWithBlocks)
 
 + (void)animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion NS_SWIFT_DISABLE_ASYNC API_AVAILABLE(ios(4.0));
@@ -408,6 +421,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+
+
+/// 提供用于在关键帧之间执行动画的方法。可以定义动画的多个关键帧，然后在它们之间进行过渡，从而创建一个更复杂、更生动的动画
 @interface UIView (UIViewKeyframeAnimations)
 
 + (void)animateKeyframesWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewKeyframeAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion API_AVAILABLE(ios(7.0));
@@ -415,6 +431,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
 
+
+
+/// 添加和管理手势识别器的方法
 @interface UIView (UIViewGestureRecognizers)
 
 @property(nullable, nonatomic,copy) NSArray<__kindof UIGestureRecognizer *> *gestureRecognizers API_AVAILABLE(ios(3.2));
@@ -429,6 +448,9 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 @end
     
+
+
+/// 提供了添加动态效果（motion effect）的方法，使得视图在设备运动时可以产生视差效果，从而增加视图的交互性和可玩性。通过添加不同的动态效果，可以为应用程序提供更加生动的交互体验。常用的动态效果包括视差效果（parallax effect）、旋转效果（tilt effect）等等
 @interface UIView (UIViewMotionEffects)
 
 /*! Begins applying `effect` to the receiver. The effect's emitted keyPath/value pairs will be
@@ -460,6 +482,7 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 
 /* A constraint is typically installed on the closest common ancestor of the views involved in the constraint.
  It is required that a constraint be installed on _a_ common ancestor of every view involved.  The numbers in a constraint are interpreted in the coordinate system of the view it is installed on.  A view is considered to be an ancestor of itself.
+ 在视图层次结构中安装和卸载自动布局约束。这些方法是与 Auto Layout 相关的，允许在运行时修改视图的布局约束
  */
 @interface UIView (UIConstraintBasedLayoutInstallingConstraints)
 
@@ -471,6 +494,9 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 - (void)removeConstraints:(NSArray<__kindof NSLayoutConstraint *> *)constraints API_AVAILABLE(ios(6.0)); // This method will be deprecated in a future release and should be avoided.  Instead use +[NSLayoutConstraint deactivateConstraints:].
 @end
 
+
+
+
 // Core Layout Methods
 
 /* To render a window, the following passes will occur, if necessary.
@@ -480,6 +506,7 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
  display
  
  Please see the conceptual documentation for a discussion of these methods.
+ 定义了一些在使用基于约束的布局时使用的核心方法
  */
 
 @interface UIView (UIConstraintBasedLayoutCoreMethods)
@@ -489,8 +516,10 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 - (void)setNeedsUpdateConstraints API_AVAILABLE(ios(6.0));
 @end
 
-// Compatibility and Adoption
 
+
+
+// Compatibility and Adoption  提供了一些用于兼容旧版 Auto Layout API 的方法
 @interface UIView (UIConstraintBasedCompatibility)
 
 /* By default, the autoresizing mask on a view gives rise to constraints that fully determine
@@ -508,7 +537,6 @@ typedef NS_ENUM(NSInteger, UILayoutConstraintAxis) {
 @end
 
 // Separation of Concerns
-
 @interface UIView (UIConstraintBasedLayoutLayering)
 
 /* Constraints do not actually relate the frames of the views, rather they relate the "alignment rects" of views.  This is the same as the frame unless overridden by a subclass of UIView.  Alignment rects are the same as the "layout rects" shown in Interface Builder 3.  Typically the alignment rect of a view is what the end user would think of as the bounding rect around a control, omitting ornamentation like shadows and engraving lines.  The edges of the alignment rect are what is interesting to align, not the shadows and such.
