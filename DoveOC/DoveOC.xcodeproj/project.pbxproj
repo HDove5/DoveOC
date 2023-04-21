@@ -79,6 +79,12 @@
 		96A59ACB28F15DB9009119E3 /* NSString+HDContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HDContent.h"; sourceTree = "<group>"; };
 		96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HDContent.m"; sourceTree = "<group>"; };
 		96BC4BF529EED485007DF06B /* HDUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUIView.m; sourceTree = "<group>"; };
+		96BFD36D29F2606A002B3D34 /* HDRefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRefreshControl.m; sourceTree = "<group>"; };
+		96BFD36F29F261D1002B3D34 /* HDSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSlider.m; sourceTree = "<group>"; };
+		96BFD37029F26B6F002B3D34 /* HDTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTextField.m; sourceTree = "<group>"; };
+		96BFD37229F27224002B3D34 /* HDMenuElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDMenuElement.m; sourceTree = "<group>"; };
+		96BFD37429F277D3002B3D34 /* HDAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDAction.m; sourceTree = "<group>"; };
+		96BFD37629F27BD0002B3D34 /* HDApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDApplication.m; sourceTree = "<group>"; };
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		96FC032028FE798E008DE8FF /* 基本规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "基本规范.md"; sourceTree = "<group>"; };
@@ -167,10 +173,16 @@
 			isa = PBXGroup;
 			children = (
 				967D085829F158B700B94316 /* HDMacro.md */,
-				96BC4BF529EED485007DF06B /* HDUIView.m */,
 				967D083E29F00E2600B94316 /* HDObject.m */,
+				96BFD37629F27BD0002B3D34 /* HDApplication.m */,
+				96BFD37229F27224002B3D34 /* HDMenuElement.m */,
+				96BFD37429F277D3002B3D34 /* HDAction.m */,
+				96BC4BF529EED485007DF06B /* HDUIView.m */,
 				967D085429F1563B00B94316 /* HDControl.m */,
 				967D085929F22A3800B94316 /* HDButton.m */,
+				96BFD36D29F2606A002B3D34 /* HDRefreshControl.m */,
+				96BFD36F29F261D1002B3D34 /* HDSlider.m */,
+				96BFD37029F26B6F002B3D34 /* HDTextField.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
