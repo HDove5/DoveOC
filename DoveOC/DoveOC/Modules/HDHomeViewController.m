@@ -18,6 +18,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     
+    [[UIRefreshControl alloc
+     ]init];
+    
     
     // Do any additional setup after loading the view.
 }

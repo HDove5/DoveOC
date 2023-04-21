@@ -229,31 +229,55 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 // use bounds/center and not frame if non-identity transform.
 @property(nonatomic) CGRect            bounds;      // default bounds is zero origin, frame size. animatable
 @property(nonatomic) CGPoint           center;      // center is center of frame, relative to anchorPoint. animatable
+// 用于设置视图的转换（旋转、缩放、平移等）
 @property(nonatomic) CGAffineTransform transform;   // default is CGAffineTransformIdentity. animatable. Please use this property instead of the affineTransform property on the layer
+// 设置视图的 3D 变换
 @property(nonatomic) CATransform3D     transform3D API_AVAILABLE(ios(13.0),tvos(13.0)); // default is CATransform3DIdentity. animatable. Please use this property instead of the transform property on the layer
+
+// 默认情况下，该值为1.0，表示在标准分辨率下绘制视图的内容。
+// 如果将其设置为其他值，例如2.0，那么视图的内容将会以高分辨率绘制，以适应高分辨率设备的屏幕。
+// 通常，这个属性会在支持高分辨率显示的设备上被设置为2.0
 @property(nonatomic) CGFloat           contentScaleFactor API_AVAILABLE(ios(4.0));
 
 /* Defines the anchor point of the layer's bounds rect, as a point in
  * normalized layer coordinates - '(0, 0)' is the bottom left corner of
  * the bounds rect, '(1, 1)' is the top right corner. Defaults to
  * '(0.5, 0.5)', i.e. the center of the bounds rect. */
+// 视图的中心点。修改 anchorPoint 可以更改视图的旋转和缩放中心
 @property(nonatomic) CGPoint anchorPoint API_AVAILABLE(ios(16.0));
 
+// 这个属性是用于控制视图是否启用多点触控（即同时识别多个手指的操作）。
+// 如果设置为YES，则视图将支持多点触控；如果设置为NO，则视图将忽略多个手指的同时操作，默认为NO
 @property(nonatomic,getter=isMultipleTouchEnabled) BOOL multipleTouchEnabled API_UNAVAILABLE(tvos);   // default is NO
+// 是一个用于控制视图是否是排他性触摸的属性。
+// 如果将此属性设置为YES，则在视图接收到触摸事件时，系统会防止其他视图接收到触摸事件。
+// 如果将此属性设置为NO，则允许多个视图同时接收触摸事件
 @property(nonatomic,getter=isExclusiveTouch) BOOL       exclusiveTouch API_UNAVAILABLE(tvos);         // default is NO
 
+// 这个方法的作用是判断在该view的坐标系中，指定点point是否在该view的bounds内，
+// 如果在，则该view成为事件的接收者，否则事件继续向下传递，直到找到合适的接收者为止。
+// 如果在传递过程中，某个view的userInteractionEnabled属性设置为NO，那么该view及其子view都不会响应事件。
+// 该方法可以重写以自定义view的点击范围，也可以在调用super方法前后做一些额外的逻辑处理
 - (nullable UIView *)hitTest:(CGPoint)point withEvent:(nullable UIEvent *)event;   // recursively calls -pointInside:withEvent:. point is in the receiver's coordinate system
+// 给定点是否在视图的边界内
+//当用户在触摸屏幕上时，iOS会调用该方法来确定触摸点是否位于视图的边界内。默认情况下，如果点在视图的边界内，该方法将返回YES，否则将返回NO。可以通过覆盖该方法来自定义视图的交互方式，例如创建一个响应点击事件的自定义视图
 - (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event;   // default returns YES if point is in bounds
 
+// 当前坐标系下的点、面转换成另一个坐标系下的点、面
 - (CGPoint)convertPoint:(CGPoint)point toView:(nullable UIView *)view;
 - (CGPoint)convertPoint:(CGPoint)point fromView:(nullable UIView *)view;
 - (CGRect)convertRect:(CGRect)rect toView:(nullable UIView *)view;
 - (CGRect)convertRect:(CGRect)rect fromView:(nullable UIView *)view;
 
+
+// 表示当视图的大小更改时，其子视图是否自动调整大小
 @property(nonatomic) BOOL               autoresizesSubviews; // default is YES. if set, subviews are adjusted according to their autoresizingMask if self.bounds changes
+// 表示UIView相对于它的superview自动调整尺寸和位置的方式
 @property(nonatomic) UIViewAutoresizing autoresizingMask;    // simple resize. default is UIViewAutoresizingNone
 
+// 方法会根据视图的内容，计算并返回一个最佳适应给定大小的大小。这个方法不会改变视图的大小，只会返回一个合适的大小建议。通常，这个方法会在创建或修改视图后调用，以确保其布局的正确性。例如，在一个UITableViewCell中，这个方法被调用来计算一个合适的高度，以便它能够容纳所有的内容
 - (CGSize)sizeThatFits:(CGSize)size;     // return 'best' size to fit given size. does not actually resize view. Default is return existing view size
+// 方法可以自动调整视图的大小，使其适合其中的内容。该方法基于视图中当前的内容，计算适合内容的最小大小，并将视图的大小更改为计算出的大小。通常在添加、更改视图内容或约束后使用该方法。
 - (void)sizeToFit;                       // calls sizeThatFits: with current view bounds and changes bounds size.
 
 @end

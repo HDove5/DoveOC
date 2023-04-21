@@ -65,6 +65,10 @@
 		94DCD08D2784B31E00481C5E /* GCDAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAPI.m; sourceTree = "<group>"; };
 		94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOVMemoryManagement.h; sourceTree = "<group>"; };
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
+		967D083E29F00E2600B94316 /* HDObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDObject.m; sourceTree = "<group>"; };
+		967D085429F1563B00B94316 /* HDControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDControl.m; sourceTree = "<group>"; };
+		967D085829F158B700B94316 /* HDMacro.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HDMacro.md; sourceTree = "<group>"; };
+		967D085929F22A3800B94316 /* HDButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDButton.m; sourceTree = "<group>"; };
 		968381B728FA973C0030F22E /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		968381BA28FA9FFC0030F22E /* OOP.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = OOP.md; sourceTree = "<group>"; };
 		968381BC28FAA06F0030F22E /* 开发规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "开发规范.md"; sourceTree = "<group>"; };
@@ -159,6 +163,30 @@
 			path = DoveOCUITests;
 			sourceTree = "<group>";
 		};
+		967D085229F155EE00B94316 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				967D085829F158B700B94316 /* HDMacro.md */,
+				96BC4BF529EED485007DF06B /* HDUIView.m */,
+				967D083E29F00E2600B94316 /* HDObject.m */,
+				967D085429F1563B00B94316 /* HDControl.m */,
+				967D085929F22A3800B94316 /* HDButton.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		967D085329F155FA00B94316 /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				968381BC28FAA06F0030F22E /* 开发规范.md */,
+				968381BE28FAA2A90030F22E /* 内存优化.md */,
+				968381BA28FA9FFC0030F22E /* OOP.md */,
+				96FC032028FE798E008DE8FF /* 基本规范.md */,
+				96FC032228FEC907008DE8FF /* 防止崩溃.md */,
+			);
+			path = Word;
+			sourceTree = "<group>";
+		};
 		96A59AC628F13E9C009119E3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,12 +244,8 @@
 		96FC031F28FE795A008DE8FF /* Document */ = {
 			isa = PBXGroup;
 			children = (
-				96BC4BF529EED485007DF06B /* HDUIView.m */,
-				968381BC28FAA06F0030F22E /* 开发规范.md */,
-				968381BE28FAA2A90030F22E /* 内存优化.md */,
-				968381BA28FA9FFC0030F22E /* OOP.md */,
-				96FC032028FE798E008DE8FF /* 基本规范.md */,
-				96FC032228FEC907008DE8FF /* 防止崩溃.md */,
+				967D085329F155FA00B94316 /* Word */,
+				967D085229F155EE00B94316 /* API */,
 			);
 			path = Document;
 			sourceTree = "<group>";
