@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     
-    UIView *V = [[UIPress alloc
+    UIView *V = [[NSData alloc
      ]init];
     [V endEditing:YES];
     
