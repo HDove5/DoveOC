@@ -90,6 +90,8 @@
 		96BFD37A29F62480002B3D34 /* HDDataPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDataPicker.m; sourceTree = "<group>"; };
 		96BFD37C29F671F4002B3D34 /* HDData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDData.m; sourceTree = "<group>"; };
 		96BFD37E29F6720D002B3D34 /* HDDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDate.m; sourceTree = "<group>"; };
+		96BFD38029F67776002B3D34 /* HDSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSwitch.m; sourceTree = "<group>"; };
+		96BFD38229F678D2002B3D34 /* HDSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSegmentedControl.m; sourceTree = "<group>"; };
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		96FC032028FE798E008DE8FF /* 基本规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "基本规范.md"; sourceTree = "<group>"; };
@@ -193,6 +195,8 @@
 				96BFD36F29F261D1002B3D34 /* HDSlider.m */,
 				96BFD37029F26B6F002B3D34 /* HDTextField.m */,
 				96BFD37A29F62480002B3D34 /* HDDataPicker.m */,
+				96BFD38029F67776002B3D34 /* HDSwitch.m */,
+				96BFD38229F678D2002B3D34 /* HDSegmentedControl.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
