@@ -85,6 +85,7 @@
 		96BFD37229F27224002B3D34 /* HDMenuElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDMenuElement.m; sourceTree = "<group>"; };
 		96BFD37429F277D3002B3D34 /* HDAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDAction.m; sourceTree = "<group>"; };
 		96BFD37629F27BD0002B3D34 /* HDApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDApplication.m; sourceTree = "<group>"; };
+		96BFD37729F50C9B002B3D34 /* HDResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDResponder.m; sourceTree = "<group>"; };
 		96FB9D6328F80303003F1A68 /* HDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		96FB9D6428F80303003F1A68 /* HDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		96FC032028FE798E008DE8FF /* 基本规范.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "基本规范.md"; sourceTree = "<group>"; };
@@ -174,9 +175,10 @@
 			children = (
 				967D085829F158B700B94316 /* HDMacro.md */,
 				967D083E29F00E2600B94316 /* HDObject.m */,
-				96BFD37629F27BD0002B3D34 /* HDApplication.m */,
 				96BFD37229F27224002B3D34 /* HDMenuElement.m */,
 				96BFD37429F277D3002B3D34 /* HDAction.m */,
+				96BFD37729F50C9B002B3D34 /* HDResponder.m */,
+				96BFD37629F27BD0002B3D34 /* HDApplication.m */,
 				96BC4BF529EED485007DF06B /* HDUIView.m */,
 				967D085429F1563B00B94316 /* HDControl.m */,
 				967D085929F22A3800B94316 /* HDButton.m */,

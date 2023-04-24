@@ -172,14 +172,20 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 @property(nullable, nonatomic,readonly) UIWindow *keyWindow API_DEPRECATED("Should not be used for applications that support multiple scenes as it returns a key window across all connected scenes", ios(2.0, 13.0));
 @property(nonatomic,readonly) NSArray<__kindof UIWindow *>  *windows API_DEPRECATED("Use UIWindowScene.windows on a relevant window scene instead", ios(2.0, 15.0));
 
+
+/// 目标是否处理的动作消息
+/// - Parameters:
+///   - action: 标识要调用的方法的选择器
+///   - target: 目标
+///   - sender: 发送动作消息的对象
+///   - event: 出发事件
 - (BOOL)sendAction:(SEL)action to:(nullable id)target from:(nullable id)sender forEvent:(nullable UIEvent *)event;
 
+// 状态栏上的活动指示器 YES 显示  NO 隐藏
 @property(nonatomic,getter=isNetworkActivityIndicatorVisible) BOOL networkActivityIndicatorVisible API_UNAVAILABLE(tvos) API_DEPRECATED("Provide a custom network activity UI in your app if desired.", ios(2.0, 13.0));
 
 @property(readonly, nonatomic) UIStatusBarStyle statusBarStyle API_UNAVAILABLE(tvos) API_DEPRECATED("Use the statusBarManager property of the window scene instead.", ios(2.0, 13.0)); // default is UIStatusBarStyleDefault
-
 @property(readonly, nonatomic,getter=isStatusBarHidden) BOOL statusBarHidden API_UNAVAILABLE(tvos) API_DEPRECATED("Use the statusBarManager property of the window scene instead.", ios(2.0, 13.0));
-
 @property(readonly, nonatomic) UIInterfaceOrientation statusBarOrientation API_UNAVAILABLE(tvos) API_DEPRECATED("Use the interfaceOrientation property of the window scene instead.", ios(2.0, 13.0));
 
 // The system only calls this method if the application delegate has not
@@ -191,16 +197,21 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 // orientations supported by this application.
 - (UIInterfaceOrientationMask)supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window API_AVAILABLE(ios(6.0)) API_UNAVAILABLE(tvos);
 
+// 状态栏方向更改的动画持续时间
 @property(nonatomic,readonly) NSTimeInterval statusBarOrientationAnimationDuration API_UNAVAILABLE(tvos) API_DEPRECATED("Use viewWillTransitionToSize:withTransitionCoordinator: instead.", ios(2.0, 13.0)); // Returns the animation duration for the status bar during a 90 degree orientation change.  It should be doubled for a 180 degree orientation change.
 @property(nonatomic,readonly) CGRect statusBarFrame API_UNAVAILABLE(tvos) API_DEPRECATED("Use the statusBarManager property of the window scene instead.", ios(2.0, 13.0)); // returns CGRectZero if the status bar is hidden
 
 @property(nonatomic) NSInteger applicationIconBadgeNumber;  // set to 0 to hide. default is 0. In iOS 8.0 and later, your application must register for user notifications using -[UIApplication registerUserNotificationSettings:] before being able to set the icon badge.
-
+// 是否支持晃动设备触发编辑操作 （从iOS 13开始，晃动设备不再默认触发编辑操作，因此需要通过代码或界面设置来启用它）
 @property(nonatomic) BOOL applicationSupportsShakeToEdit API_AVAILABLE(ios(3.0)) API_UNAVAILABLE(tvos);
-
 @property(nonatomic,readonly) UIApplicationState applicationState API_AVAILABLE(ios(4.0));
+// 获取应用程序在后台运行的时间剩余量
 @property(nonatomic,readonly) NSTimeInterval backgroundTimeRemaining API_AVAILABLE(ios(4.0));
 
+
+
+
+// 用于在应用程序转到后台运行模式时，向系统请求额外的后台执行时间
 - (UIBackgroundTaskIdentifier)beginBackgroundTaskWithExpirationHandler:(void(^ __nullable)(void))handler  API_AVAILABLE(ios(4.0)) NS_REQUIRES_SUPER;
 - (UIBackgroundTaskIdentifier)beginBackgroundTaskWithName:(nullable NSString *)taskName expirationHandler:(void(^ __nullable)(void))handler API_AVAILABLE(ios(7.0)) NS_REQUIRES_SUPER;
 - (void)endBackgroundTask:(UIBackgroundTaskIdentifier)identifier API_AVAILABLE(ios(4.0)) NS_REQUIRES_SUPER;
@@ -213,6 +224,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
     This setter will have no effect unless your application has the "fetch"
     UIBackgroundMode. See the UIApplicationDelegate method
     `application:performFetchWithCompletionHandler:` for more. */
+// 用于设置应用程序在后台自动获取数据的时间间隔
 - (void)setMinimumBackgroundFetchInterval:(NSTimeInterval)minimumBackgroundFetchInterval API_DEPRECATED("Use a BGAppRefreshTask in the BackgroundTasks framework instead", ios(7.0, 13.0), tvos(11.0, 13.0));
 ;
 
@@ -228,6 +240,11 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 // Return the size category
 @property(nonatomic,readonly) UIContentSizeCategory preferredContentSizeCategory API_AVAILABLE(ios(7.0));
 
+
+
+
+
+
 #pragma mark -- UIScene --
 // All of the currently connected UIScene instances
 @property(nonatomic, readonly) NSSet<UIScene *> *connectedScenes API_AVAILABLE(ios(13.0));
@@ -241,6 +258,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 // Request a given session be activated, first connecting it to the application if necessary.
 // Providing a session will activate, connecting if necessary, the interface backed by the already existing UISceneSession.
 // Providing a user activity will dispatch that activity to the provided session's scene. If no session is provided, then the system will select one (possibly creating a new session, if appropriate) and pass the activity to the session scene's delegate.
+// 用于请求激活指定的场景会话，并传递相关的用户活动和选项
 - (void)requestSceneSessionActivation:(nullable UISceneSession *)sceneSession userActivity:(nullable NSUserActivity *)userActivity options:(nullable UISceneActivationRequestOptions *)options errorHandler:(nullable void (^)(NSError * error))errorHandler API_AVAILABLE(ios(13.0));
 
 // requests that a given session be closed, disconnecting the currently connected scene if present, and calling the -application:didDiscardSceneSessions: method on the application's delegate
@@ -254,7 +272,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 
-
+// 远程通知相关
 @interface UIApplication (UIRemoteNotifications)
 
 // Calling this will result in either application:didRegisterForRemoteNotificationsWithDeviceToken: or application:didFailToRegisterForRemoteNotificationsWithError: to be called on the application delegate. Note: these callbacks will be made only if the application has successfully registered for user notifications with registerUserNotificationSettings:, or if it is enabled for Background App Refresh.
@@ -277,6 +295,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 // In iOS 8.0 and later, your application must register for user notifications using -[UIApplication registerUserNotificationSettings:] before being able to schedule and present UILocalNotifications
+// 本地通知相关
 @interface UIApplication (UILocalNotifications)
 
 - (void)presentLocalNotificationNow:(UILocalNotification *)notification API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:withCompletionHandler:]", ios(4.0, 10.0)) API_UNAVAILABLE(tvos);
@@ -294,6 +313,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 @class UIUserNotificationSettings;
+// 用户通知设置
 @interface UIApplication (UIUserNotificationSettings)
 
 // Registering UIUserNotificationSettings more than once results in previous settings being overwritten.
@@ -307,9 +327,8 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 
-
+// 用于处理远程控制事件的
 @interface UIApplication (UIRemoteControlEvents)
-
 - (void)beginReceivingRemoteControlEvents API_AVAILABLE(ios(4.0));
 - (void)endReceivingRemoteControlEvents API_AVAILABLE(ios(4.0));
 
@@ -318,7 +337,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 
-
+// 新闻类服务
 @interface UIApplication (UINewsstand)
 - (void)setNewsstandIconImage:(nullable UIImage *)image API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0)) API_UNAVAILABLE(tvos);
 @end
@@ -328,6 +347,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 @class UIApplicationShortcutItem;
+// 3Dtouch
 @interface UIApplication (UIShortcutItems)
 // Register shortcuts to display on the home screen, or retrieve currently registered shortcuts.
 @property (nullable, nonatomic, copy) NSArray<UIApplicationShortcutItem *> *shortcutItems API_AVAILABLE(ios(9.0)) API_UNAVAILABLE(tvos);
@@ -336,7 +356,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 
-
+// 管理应用程序的不同图标
 @interface UIApplication (UIAlternateApplicationIcons)
 // If false, alternate icons are not supported for the current process.
 @property (readonly, nonatomic) BOOL supportsAlternateIcons NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons") API_AVAILABLE(ios(10.3), tvos(10.2));
@@ -353,6 +373,7 @@ UIKIT_EXTERN API_AVAILABLE(ios(2.0)) NS_SWIFT_UI_ACTOR
 
 
 @protocol UIStateRestoring;
+// 管理应用程序的状态恢复和持久化的
 @interface UIApplication (UIStateRestoration)
 // These methods are used to inform the system that state restoration is occurring asynchronously after the application
 // has processed its restoration archive on launch. In the even of a crash, the system will be able to detect that it may
@@ -539,7 +560,7 @@ typedef NSString * UIApplicationExtensionPointIdentifier NS_TYPED_ENUM;
 
 
 
-
+// 已被弃用的API
 @interface UIApplication(UIApplicationDeprecated)
 
 @property(nonatomic,getter=isProximitySensingEnabled) BOOL proximitySensingEnabled API_DEPRECATED("", ios(2.0, 3.0)) API_UNAVAILABLE(tvos); // default is NO. see UIDevice for replacement
