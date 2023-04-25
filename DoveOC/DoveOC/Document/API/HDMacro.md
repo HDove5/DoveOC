@@ -13,3 +13,17 @@ UIKIT_EXTERN 是一个定义在 UIKit 框架中的宏，用于声明一个在 UI
 
 
 NS_REQUIRES_SUPER是一个宏定义，用于告知开发者在子类中覆盖（重写）父类方法时必须调用父类方法
+
+
+UI_APPEARANCE_SELECTOR是一个宏定义，用于声明支持在外观协议中设置属性的属性。
+在iOS中，外观协议提供了一种方法来定制UI控件的外观，包括导航栏，标签栏，工具栏等。通过使用UI_APPEARANCE_SELECTOR宏，您可以将属性标记为支持外观协议，并允许开发人员使用外观协议来设置这些属性的值。
+例如，如果您想让导航栏的背景色在应用程序的整个生命周期中保持一致，可以使用UIAppearance协议设置该属性。在导航栏类的头文件中，您可以将背景颜色属性标记为支持UI_APPEARANCE_SELECTOR，如下所示：
+@property (nonatomic, strong) UIColor *barTintColor UI_APPEARANCE_SELECTOR;
+这将允许开发人员在使用外观协议时设置导航栏的barTintColor属性。例如，可以使用以下代码将应用程序的主题颜色设置为导航栏的背景色：
+[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.2 green:0.6 blue:0.8 alpha:1.0]];
+需要注意的是，并非所有属性都支持UI_APPEARANCE_SELECTOR宏，只有由UIAppearance协议支持的属性才能使用该宏进行标记。另外，如果您在定义属性时将其标记为UI_APPEARANCE_SELECTOR，则应该确保其实现满足外观协议的要求。
+
+
+
+
+

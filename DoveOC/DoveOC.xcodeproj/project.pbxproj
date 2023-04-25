@@ -66,6 +66,10 @@
 		94DCD0902786D7D800481C5E /* DOVMemoryManagement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOVMemoryManagement.h; sourceTree = "<group>"; };
 		94DCD0912786D7D800481C5E /* DOVMemoryManagement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOVMemoryManagement.m; sourceTree = "<group>"; };
 		96340CF629F6A267003B87C1 /* HDPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageControl.m; sourceTree = "<group>"; };
+		96340CF829F77095003B87C1 /* HDCustomControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomControl.m; sourceTree = "<group>"; };
+		96340CFA29F770AE003B87C1 /* HDCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomView.m; sourceTree = "<group>"; };
+		96340CFB29F77159003B87C1 /* HDActivityIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDActivityIndicatorView.m; sourceTree = "<group>"; };
+		96340CFC29F778D5003B87C1 /* HDNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNavigationBar.m; sourceTree = "<group>"; };
 		967D083E29F00E2600B94316 /* HDObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDObject.m; sourceTree = "<group>"; };
 		967D085429F1563B00B94316 /* HDControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDControl.m; sourceTree = "<group>"; };
 		967D085829F158B700B94316 /* HDMacro.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = HDMacro.md; sourceTree = "<group>"; };
@@ -79,7 +83,7 @@
 		96A59AC828F13F10009119E3 /* HDVPN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDVPN.m; sourceTree = "<group>"; };
 		96A59ACB28F15DB9009119E3 /* NSString+HDContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HDContent.h"; sourceTree = "<group>"; };
 		96A59ACC28F15DB9009119E3 /* NSString+HDContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HDContent.m"; sourceTree = "<group>"; };
-		96BC4BF529EED485007DF06B /* HDUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUIView.m; sourceTree = "<group>"; };
+		96BC4BF529EED485007DF06B /* HDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDView.m; sourceTree = "<group>"; };
 		96BFD36D29F2606A002B3D34 /* HDRefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDRefreshControl.m; sourceTree = "<group>"; };
 		96BFD36F29F261D1002B3D34 /* HDSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSlider.m; sourceTree = "<group>"; };
 		96BFD37029F26B6F002B3D34 /* HDTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTextField.m; sourceTree = "<group>"; };
@@ -188,7 +192,7 @@
 				96BFD37429F277D3002B3D34 /* HDAction.m */,
 				96BFD37729F50C9B002B3D34 /* HDResponder.m */,
 				96BFD37629F27BD0002B3D34 /* HDApplication.m */,
-				96BC4BF529EED485007DF06B /* HDUIView.m */,
+				96BC4BF529EED485007DF06B /* HDView.m */,
 				96BFD37829F622D9002B3D34 /* HDWindow.m */,
 				967D085429F1563B00B94316 /* HDControl.m */,
 				967D085929F22A3800B94316 /* HDButton.m */,
@@ -199,6 +203,10 @@
 				96BFD38029F67776002B3D34 /* HDSwitch.m */,
 				96BFD38229F678D2002B3D34 /* HDSegmentedControl.m */,
 				96340CF629F6A267003B87C1 /* HDPageControl.m */,
+				96340CF829F77095003B87C1 /* HDCustomControl.m */,
+				96340CFA29F770AE003B87C1 /* HDCustomView.m */,
+				96340CFB29F77159003B87C1 /* HDActivityIndicatorView.m */,
+				96340CFC29F778D5003B87C1 /* HDNavigationBar.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
